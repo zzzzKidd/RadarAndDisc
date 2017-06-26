@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="播放" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play"
+        android:gravity="center"
+        android:text="停止" />
+
+    <com.zrq.radaranddisc.RoundImageView
+        android:id="@+id/infoOperating"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/stop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/aaa"
+        app:border_inside_color="#fff7f2e9"
+        app:border_outside_color="#ffd5d1c8"
+        app:border_thickness="2dp" />
+
+    <!--<com.zrq.radaranddisc.SweepView-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:layout_below="@id/infoOperating"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--app:end_color="@android:color/white"-->
+    <!--app:start_color="@android:color/darker_gray" />-->
+    <!--<com.zrq.radaranddisc.PlateView-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:layout_below="@id/infoOperating"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--app:m_color="@android:color/darker_gray" />-->
+
+    <com.zrq.radaranddisc.RadarView
+        android:id="@+id/radar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/infoOperating"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:end_color="#80ffffff"
+        app:m_color="#80aaaaaa"
+        app:start_color="@android:color/darker_gray" />
+
+</RelativeLayout>

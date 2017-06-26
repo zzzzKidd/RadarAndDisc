@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="RadarView">
+        <attr name="center_x" format="float|reference" />
+        <attr name="center_y" format="float|reference" />
+        <attr name="radius" format="float|reference"/>
+        <attr name="start_color" format="color|reference"/>
+        <attr name="end_color" format="color|reference"/>
+        <attr name="m_color" format="color|reference"/>
+    </declare-styleable>
+</resources>
