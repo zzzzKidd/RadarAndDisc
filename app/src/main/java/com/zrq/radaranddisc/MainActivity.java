@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 playMusic();
-                radarView.start();
+                radarView.start();//启动雷达扫面动画
             }
         });
 
@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 stopMusic();
-                radarView.stot();
+                radarView.stot();//停止雷达扫面动画
             }
         });
 
