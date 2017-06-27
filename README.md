@@ -5,3 +5,4 @@ SweepView是上层旋转的扫面效果，扫面效果用SweepGradient实现，�
 PlateView是雷达底盘
 RadarView就是个RelativeLayout，把上面两个View装进去，然后让扫面View转动
 动画效果repeatCount设置为-1，就无限循环转动了
+ 
