@@ -1,7 +1,6 @@
 package com.zrq.radaranddisc;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.support.annotation.AttrRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,12 +18,6 @@ import android.widget.FrameLayout;
 public class RadarView extends FrameLayout {
 
     private Context mContext;
-    private static final int DEFAULT_COLOR = 0xFFFFFFFF;
-    private float center_x;
-    private float center_y;
-    private float radius;
-    private int start_color = DEFAULT_COLOR;
-    private int end_color = DEFAULT_COLOR;
     private SweepView sweepView;
 
     public RadarView(@NonNull Context context) {
@@ -44,10 +37,6 @@ public class RadarView extends FrameLayout {
 
     private void init(Context context, AttributeSet attrs) {
         mContext = context;
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RadarView);
-        start_color = a.getColor(R.styleable.RadarView_start_color, DEFAULT_COLOR);
-        end_color = a.getColor(R.styleable.RadarView_end_color, DEFAULT_COLOR);
-        a.recycle();
 
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         //底盘
@@ -73,6 +62,4 @@ public class RadarView extends FrameLayout {
     public void stot(){
         sweepView.clearAnimation();
     }
-
-
 }
