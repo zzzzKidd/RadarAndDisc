@@ -51,6 +51,7 @@ public class PlateView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setDither(true);
         paint.setColor(color);
         paint.setStrokeWidth(1);
         paint.setStyle(Paint.Style.STROKE);

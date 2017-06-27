@@ -61,6 +61,7 @@ public class SweepView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setDither(true);
 
         canvas.save();
         canvas.rotate(-18,center_x,center_y);

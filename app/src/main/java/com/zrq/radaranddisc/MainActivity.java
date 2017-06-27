@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         infoOperatingIV = (ImageView) findViewById(R.id.infoOperating);
+        final RadarView radarView = (RadarView) findViewById(R.id.radar);
 
         Button play = (Button) findViewById(R.id.play);
         Button stop = (Button) findViewById(R.id.stop);
@@ -33,6 +34,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 playMusic();
+                radarView.start();
             }
         });
 
@@ -40,6 +42,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 stopMusic();
+                radarView.stot();
             }
         });
 
