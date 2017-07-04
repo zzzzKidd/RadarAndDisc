@@ -41,22 +41,33 @@
     <!--app:end_color="@android:color/white"-->
     <!--app:start_color="@android:color/darker_gray" />-->
     <!--<com.zrq.radaranddisc.PlateView-->
-        <!--android:layout_width="120dp"-->
-        <!--android:layout_height="120dp"-->
-        <!--android:layout_below="@id/infoOperating"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="15dp"-->
-        <!--app:m_color="@android:color/darker_gray" />-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:layout_below="@id/infoOperating"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--app:m_color="@android:color/darker_gray" />-->
 
     <com.zrq.radaranddisc.RadarView
         android:id="@+id/radar"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:layout_below="@+id/infoOperating"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         app:end_color="#80ffffff"
         app:m_color="#80aaaaaa"
-        app:start_color="@android:color/darker_gray"
-        android:layout_below="@+id/infoOperating"
-        android:layout_alignStart="@+id/infoOperating" />
+        app:start_color="@android:color/darker_gray" />
+
+    <com.zrq.radaranddisc.RadarView2
+        android:id="@+id/radar2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/radar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        app:end_color="#80ffffff"
+        app:m_color="#80aaaaaa"
+        app:start_color="@android:color/darker_gray" />
 
 </RelativeLayout>

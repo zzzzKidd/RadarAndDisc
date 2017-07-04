@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         infoOperatingIV = (ImageView) findViewById(R.id.infoOperating);
         final RadarView radarView = (RadarView) findViewById(R.id.radar);
+        final RadarView2 radarView2 = (RadarView2) findViewById(R.id.radar2);
 
         Button play = (Button) findViewById(R.id.play);
         Button stop = (Button) findViewById(R.id.stop);
@@ -35,6 +36,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 playMusic();
                 radarView.start();//启动雷达扫面动画
+                radarView2.start();
             }
         });
 
@@ -42,13 +44,16 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 stopMusic();
-                radarView.stot();//停止雷达扫面动画
+                radarView.stop();//停止雷达扫面动画
+                radarView2.stop();
             }
         });
 
     }
 
     private void playMusic() {
+        if(mediaPlayer != null && mediaPlayer.isPlaying())return;
+
         mediaPlayer = MediaPlayer.create(this, R.raw.hua);
         mediaPlayer.start();
 
@@ -72,8 +77,9 @@ public class MainActivity extends Activity {
     }
 
     private void stopMusic() {
-        if (mediaPlayer != null)
+        if (mediaPlayer != null) {
             mediaPlayer.stop();
+        }
         infoOperatingIV.clearAnimation();
     }
 

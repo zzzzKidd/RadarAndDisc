@@ -51,15 +51,19 @@ public class RadarView extends FrameLayout {
     }
 
     public void start(){
-        Animation operatingAnim = AnimationUtils.loadAnimation(mContext, R.anim.radar_rotate);
-        LinearInterpolator lin = new LinearInterpolator();
-        operatingAnim.setInterpolator(lin);
-        if (operatingAnim != null) {
-            sweepView.startAnimation(operatingAnim);
+        if(sweepView.getAnimation()==null) {
+            Animation operatingAnim = AnimationUtils.loadAnimation(mContext, R.anim.radar_rotate);
+            LinearInterpolator lin = new LinearInterpolator();
+            operatingAnim.setInterpolator(lin);
+            if (operatingAnim != null) {
+                sweepView.startAnimation(operatingAnim);
+            }
         }
     }
 
-    public void stot(){
-        sweepView.clearAnimation();
+    public void stop(){
+        if(sweepView.getAnimation()!=null) {
+            sweepView.clearAnimation();
+        }
     }
 }
